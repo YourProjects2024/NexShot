@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhatia Buildmart — Aluminium, uPVC, Steel & Glass Solutions | Raigarh</title>
+<meta name="description" content="Bhatia Buildmart — End-to-end customised interiors in Raigarh, CG. uPVC doors & windows, aluminium fabrication, modular wardrobes, pooja units, TV units, glass & steel. 5000+ happy clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..700&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f7f2e9;
+  --cream-2: #efe7d8;
+  --ink: #1b1813;
+  --ink-soft: #39322a;
+  --brass: #b9852f;
+  --brass-deep: #8a5e1c;
+  --slate: #1f3a52;
+  --slate-deep: #142838;
+  --line: rgba(27,24,19,.14);
+  --shadow: 0 24px 60px -28px rgba(27,24,19,.45);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* grain overlay */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 { font-family: "Fraunces", serif; font-weight: 600; line-height: 1.05; letter-spacing: -.01em; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; object-fit: cover; }
+.wrap { width: min(1180px, 92vw); margin: 0 auto; }
+.eyebrow {
+  font-family: "Hanken Grotesk"; font-weight: 700; font-size: .74rem; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--brass-deep);
+}
+
+/* ============ NAV ============ */
+header.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  transition: .4s ease;
+}
+header.nav .bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 0; transition: .4s ease;
+}
+header.nav.scrolled { background: rgba(247, 242, 233, .86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+header.nav.scrolled .bar { padding: 14px 0; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand .mark {
+  width: 42px; height: 42px; border-radius: 11px; flex: none;
+  background: linear-gradient(150deg, var(--slate), var(--slate-deep));
+  display: grid; place-items: center; color: #fff; font-family: "Fraunces"; font-weight: 700;
+  font-size: 1.25rem; box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.brand .mark::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 40%, rgba(185, 133, 47, .5)); }
+.brand .mark span { position: relative; z-index: 2; }
+.brand b { font-family: "Fraunces"; font-weight: 600; font-size: 1.18rem; letter-spacing: -.02em; display: block; line-height: 1; }
+.brand small { font-size: .66rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+nav.links { display: flex; gap: 34px; align-items: center; }
+nav.links a { font-weight: 600; font-size: .92rem; position: relative; color: var(--ink-soft); }
+nav.links a::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: var(--brass); transition: .3s; }
+nav.links a:hover { color: var(--ink); }
+nav.links a:hover::after { width: 100%; }
+.btn {
+  display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: .92rem;
+  padding: 13px 22px; border-radius: 999px; transition: .3s ease; cursor: pointer; border: none;
+}
+.btn-call { background: var(--ink); color: var(--cream); }
+.btn-call:hover { background: var(--brass-deep); transform: translateY(-2px); }
+.btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: var(--ink); color: var(--cream); }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.menu-toggle span { width: 24px; height: 2px; background: var(--ink); transition: .3s; }
+
+/* ============ HERO ============ */
+.hero { position: relative; padding: 170px 0 90px; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; top: -20%; right: -10%; width: 60vw; height: 60vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 133, 47, .16), transparent 65%); z-index: 0;
+}
+.hero::after {
+  content: ""; position: absolute; bottom: -30%; left: -20%; width: 55vw; height: 55vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 58, 82, .12), transparent 65%); z-index: 0;
+}
+.hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 54px; align-items: center; }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.7rem); margin: 18px 0 22px; }
+.hero h1 em { font-style: italic; color: var(--brass-deep); }
+.hero p.lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 34ch; margin-bottom: 30px; }
+.hero .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 38px; }
+.hero .materials { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero .materials span {
+  font-size: .78rem; font-weight: 700; letter-spacing: .04em; padding: 7px 14px; border-radius: 999px;
+  background: rgba(27, 24, 19, .05); border: 1px solid var(--line);
+}
+
+/* hero collage */
+.collage { position: relative; height: 520px; }
+.tile { position: absolute; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); background: var(--cream-2); transition: transform 0.4s ease, z-index 0s; }
+.tile img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95); transition: filter 0.4s, transform 0.6s ease; }
+.tile:hover { z-index: 10; transform: scale(1.03) translateY(-4px); }
+.tile:hover img { filter: brightness(1.05); }
+.tile .tag { position: absolute; left: 12px; bottom: 12px; background: rgba(27, 24, 19, .82); color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .08em; padding: 5px 11px; border-radius: 7px; text-transform: uppercase; pointer-events: none; }
+.t1 { width: 54%; height: 62%; top: 0; left: 0; z-index: 3; }
+.t2 { width: 42%; height: 46%; top: 14%; right: 0; z-index: 4; }
+.t3 { width: 46%; height: 42%; bottom: 0; left: 8%; z-index: 5; }
+.t4 { width: 34%; height: 34%; bottom: 6%; right: 2%; z-index: 6; }
+.stat-badge {
+  position: absolute; z-index: 8; background: var(--cream); border: 1px solid var(--line);
+  border-radius: 16px; padding: 14px 18px; box-shadow: var(--shadow); bottom: -18px; left: -14px;
+}
+.stat-badge b { font-family: "Fraunces"; font-size: 1.7rem; display: block; line-height: 1; color: var(--brass-deep); }
+.stat-badge small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); }
+
+/* placeholder visual backup */
+.ph {
+  position: relative; display: grid; place-items: center; height: 100%; width: 100%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .35), transparent),
+    repeating-linear-gradient(45deg, rgba(27, 24, 19, .03) 0 14px, transparent 14px 28px),
+    linear-gradient(160deg, var(--c1, #e7dcc8), var(--c2, #cdb79a));
+}
+.ph svg { width: 46px; height: 46px; opacity: .5; color: var(--ink); }
+.ph .ph-label { position: absolute; bottom: 12px; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(27, 24, 19, .45); text-align: center; width: 100%; padding: 0 10px; }
+
+/* ============ MARQUEE ============ */
+.marquee { background: var(--ink); color: var(--cream); padding: 18px 0; overflow: hidden; white-space: nowrap; }
+.marquee .track { display: inline-flex; gap: 48px; animation: scroll 28s linear infinite; font-family: "Fraunces"; font-size: 1.25rem; font-style: italic; }
+.marquee .track span { display: inline-flex; gap: 48px; align-items: center; }
+.marquee .track i { color: var(--brass); font-style: normal; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* ============ SECTION HEAD ============ */
+section { padding: 96px 0; }
+.shead { max-width: 680px; margin-bottom: 54px; }
+.shead h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); margin: 14px 0 16px; }
+.shead p { color: var(--ink-soft); font-size: 1.05rem; }
+
+/* ============ SERVICES ============ */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.svc {
+  background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 30px 26px;
+  transition: .35s ease; position: relative; overflow: hidden;
+}
+.svc::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 0; background: var(--brass); transition: .4s; }
+.svc:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.svc:hover::before { width: 100%; }
+.svc .ic { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; background: var(--cream-2); margin-bottom: 18px; color: var(--slate); }
+.svc .ic svg { width: 26px; height: 26px; }
+.svc h3 { font-size: 1.32rem; margin-bottom: 8px; }
+.svc p { color: var(--ink-soft); font-size: .95rem; }
+
+/* ============ PORTFOLIO ============ */
+.portfolio { background: var(--cream-2); }
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 34px; }
+.filters button {
+  font-family: "Hanken Grotesk"; font-weight: 700; font-size: .86rem; padding: 9px 18px; border-radius: 999px;
+  border: 1.5px solid var(--line); background: transparent; cursor: pointer; transition: .25s; color: var(--ink-soft);
+}
+.filters button.active, .filters button:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.work {
+  position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 1/1.08; cursor: pointer;
+  box-shadow: 0 10px 30px -18px rgba(27,24,19,.5); transition: .4s;
+}
+.work.span2 { grid-column: span 2; aspect-ratio: auto; }
+.work .ph, .work img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.work:hover { transform: scale(1.015); }
+.work:hover img { transform: scale(1.05); }
+.work .overlay {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px;
+  background: linear-gradient(transparent 45%, rgba(20,18,14,.88)); opacity: 0; transition: .35s;
+}
+.work:hover .overlay { opacity: 1; }
+.work .overlay h4 { color: #fff; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.work .overlay small { color: var(--brass); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .68rem; margin-bottom: 4px; }
+.work .badge {
+  position: absolute; top: 12px; left: 12px; font-size: .66rem; font-weight: 800; letter-spacing: .1em;
+  padding: 5px 11px; border-radius: 7px; text-transform: uppercase; color: #fff; background: var(--brass-deep); z-index: 2;
+}
+
+/* ============ BEFORE / AFTER SLIDER ============ */
+.ba { background: var(--ink); color: var(--cream); }
+.ba .shead h2, .ba .shead .eyebrow { color: inherit; }
+.ba .shead .eyebrow { color: var(--brass); }
+.ba .shead p { color: rgba(247,242,233,.7); }
+.ba-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.compare {
+  position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/3;
+  box-shadow: var(--shadow); user-select: none; touch-action: none; background: #000;
+}
+.compare .layer { position: absolute; inset: 0; }
+.compare .layer img { width: 100%; height: 100%; object-fit: cover; }
+.compare .after { clip-path: inset(0 0 0 50%); }
+.compare .lbl { position: absolute; top: 14px; font-size: .7rem; font-weight: 800; letter-spacing: .12em; padding: 6px 12px; border-radius: 7px; text-transform: uppercase; color: #fff; background: rgba(20,18,14,.7); z-index: 5; pointer-events: none; }
+.compare .lbl.b { left: 14px; }
+.compare .lbl.a { right: 14px; background: var(--brass-deep); }
+.compare .handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); z-index: 6; cursor: ew-resize; }
+.compare .handle .grip { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: var(--shadow); color: var(--ink); font-weight: 800; font-size: 1.1rem; }
+
+/* ============ STATS ============ */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.stats .s b { font-family: "Fraunces"; font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--brass-deep); display: block; line-height: 1; }
+.stats .s small { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); }
+
+/* ============ WHY ============ */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.why { padding: 32px 28px; border-radius: 20px; background: #fff; border: 1px solid var(--line); }
+.why .num { font-family: "Fraunces"; font-size: 1.1rem; font-style: italic; color: var(--brass-deep); margin-bottom: 10px; }
+.why h3 { font-size: 1.28rem; margin-bottom: 8px; }
+.why p { color: var(--ink-soft); font-size: .95rem; }
+
+/* ============ TESTIMONIALS ============ */
+.testi { background: var(--cream-2); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.quote { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 30px 28px; position: relative; }
+.quote .stars { color: var(--brass); letter-spacing: 3px; margin-bottom: 14px; }
+.quote p { font-family: "Fraunces"; font-style: italic; font-size: 1.08rem; color: var(--ink-soft); margin-bottom: 18px; }
+.quote .who { display: flex; align-items: center; gap: 12px; }
+.quote .who .av { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(150deg, var(--slate), var(--slate-deep)); color: #fff; display: grid; place-items: center; font-weight: 700; font-family: "Fraunces"; }
+.quote .who b { font-size: .96rem; }
+.quote .who small { display: block; color: var(--ink-soft); font-size: .8rem; }
+
+/* ============ CONTACT ============ */
+.contact { background: var(--slate-deep); color: var(--cream); }
+.contact .shead h2, .contact .shead .eyebrow { color: inherit; }
+.contact .shead .eyebrow { color: var(--brass); }
+.contact .shead p { color: rgba(247,242,233,.7); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.cinfo { display: grid; gap: 18px; }
+.cinfo a, .cinfo .row { display: flex; gap: 16px; align-items: flex-start; padding: 20px; border-radius: 16px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); transition: .3s; }
+.cinfo a:hover { background: rgba(255,255,255,.1); transform: translateX(4px); }
+.cinfo .ci-ic { width: 44px; height: 44px; border-radius: 11px; background: var(--brass); color: var(--ink); display: grid; place-items: center; flex: none; }
+.cinfo small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: rgba(247,242,233,.6); display: block; margin-bottom: 3px; }
+.cinfo b { font-size: 1.08rem; font-weight: 600; }
+.cform { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 32px; }
+.cform label { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; margin: 0 0 7px; color: rgba(247,242,233,.7); }
+.cform input, .cform textarea, .cform select {
+  width: 100%; padding: 13px 15px; border-radius: 11px; border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05); color: var(--cream); font-family: inherit; font-size: .96rem; margin-bottom: 16px;
+}
+.cform input:focus, .cform textarea:focus, .cform select:focus { outline: none; border-color: var(--brass); }
+.cform select option { color: #000; }
+.cform .btn { width: 100%; justify-content: center; background: var(--brass); color: var(--ink); }
+.cform .btn:hover { background: #fff; }
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(14, 12, 10, 0.95); z-index: 1010;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 20px;
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox-content {
+  position: relative; max-width: 900px; width: 100%; max-height: 80vh;
+  display: flex; justify-content: center; align-items: center; border-radius: 12px; overflow: hidden;
+}
+.lightbox-content img {
+  max-width: 100%; max-height: 80vh; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.lightbox-close {
+  position: absolute; top: 24px; right: 24px; background: rgba(255,255,255,0.1); border: none;
+  color: #fff; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; cursor: pointer;
+  display: grid; place-items: center; transition: background 0.3s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.25); }
+.lightbox-caption {
+  margin-top: 18px; text-align: center; color: var(--cream);
+}
+.lightbox-caption h4 { font-size: 1.4rem; font-family: "Fraunces"; }
+.lightbox-caption p { font-size: 0.9rem; color: var(--brass); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; font-weight: 700; }
+
+/* ============ FOOTER ============ */
+footer { background: var(--ink); color: rgba(247, 242, 233, .7); padding: 54px 0 30px; }
+.fgrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+footer h4 { font-family: "Fraunces"; color: var(--cream); font-size: 1.05rem; margin-bottom: 16px; }
+footer .flink { display: block; color: rgba(247, 242, 233, .7); margin-bottom: 9px; font-size: .92rem; transition: .2s; }
+footer .flink:hover { color: var(--brass); }
+footer .brand b, footer .brand small { color: var(--cream); }
+.fbottom { border-top: 1px solid rgba(255,255,255,.12); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .84rem; }
+
+/* ============ FLOATING WHATSAPP ============ */
+.fab { position: fixed; bottom: 26px; right: 26px; z-index: 900; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 14px 34px -8px rgba(37,211,102,.6); transition: .3s; animation: pulse 2.4s infinite; }
+.fab:hover { transform: scale(1.08); }
+.fab svg { width: 32px; height: 32px; color: #fff; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5) } 70% { box-shadow: 0 0 0 16px rgba(37,211,102,0) } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0) } }
+
+/* ============ REVEAL ANIM ============ */
+.reveal { opacity: 0; transform: translateY(26px); transition: .8s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+.hero h1, .hero p.lead, .hero .cta, .hero .materials { opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero .eyebrow { opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero h1 { animation-delay: .1s; } .hero p.lead { animation-delay: .25s; } .hero .cta { animation-delay: .38s; } .hero .materials { animation-delay: .5s; }
+.collage { opacity: 0; animation: rise 1s cubic-bezier(.2,.7,.2,1) .3s forwards; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:980px) {
+  nav.links { position: fixed; inset: 0 0 0 auto; width: 78%; max-width: 340px; background: var(--cream); flex-direction: column; justify-content: center; padding: 40px; transform: translateX(100%); transition: .4s; box-shadow: var(--shadow); align-items: flex-start; gap: 26px; }
+  nav.links.open { transform: none; }
+  .menu-toggle { display: flex; }
+  .hero .wrap, .ba-wrap, .contact-grid { grid-template-columns: 1fr; }
+  .collage { height: 420px; order: -1; }
+  .services-grid, .why-grid, .testi-grid { grid-template-columns: 1fr 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; gap: 34px; }
+  .fgrid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:600px) {
+  .services-grid, .why-grid, .testi-grid, .gallery, .fgrid { grid-template-columns: 1fr; }
+  .work.span2 { grid-column: span 1; }
+  section { padding: 70px 0; }
+  .nav-cta-desktop { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap bar">
+    <a href="#home" class="brand">
+      <div class="mark"><span>bB</span></div>
+      <div><b>Bhatia Buildmart</b><small>Aluminium · Steel · uPVC · Glass</small></div>
+    </a>
+    <nav class="links" id="links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#transform">Before / After</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+919879843667" class="btn btn-call nav-cta-desktop">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+      Call Now
+    </a>
+    <button class="menu-toggle" id="toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Gharghoda · Tamnar · Chhal · Raigarh, CG</div>
+      <h1>Spaces that go from <em>ordinary</em> to extraordinary.</h1>
+      <p class="lead">End-to-end customised interiors in aluminium, uPVC, steel & glass — designed, fabricated and fitted by Bhatia Buildmart.</p>
+      <div class="cta">
+        <a href="tel:+919879843667" class="btn btn-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+          98798 43667
+        </a>
+        <a href="#work" class="btn btn-ghost">View Our Work →</a>
+      </div>
+      <div class="materials">
+        <span>uPVC Doors & Windows</span><span>Aluminium Fabrication</span>
+        <span>Modular Wardrobes</span><span>Glass & Mirror</span><span>Steel Solutions</span>
+      </div>
+    </div>
+    <div class="collage">
+      <!-- High-res luxurious TV / living cabinet installation -->
+      <div class="tile t1">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Living & TV Units">
+        <span class="tag">Living Room</span>
+      </div>
+      <!-- Luxurious wooden screens or modern prayer alcove concept -->
+      <div class="tile t2">
+        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80" alt="Mandir Unit">
+        <span class="tag">Pooja Room</span>
+      </div>
+      <!-- Stunning contemporary sleek bedroom closet wardrobe -->
+      <div class="tile t3">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Wardrobes">
+        <span class="tag">Bedroom</span>
+      </div>
+      <!-- High grade modern glazing sliding balcony window -->
+      <div class="tile t4">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80" alt="uPVC window">
+        <span class="tag">uPVC Fitting</span>
+      </div>
+      <div class="stat-badge"><b>5000+</b><small>Happy Clients</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="track">
+    <span><i>◆</i> Customised Design <i>◆</i> Premium Materials <i>◆</i> On-Time Fitting <i>◆</i> 5000+ Happy Clients <i>◆</i> End-to-End Solution <i>◆</i> Free Site Visit <i>◆</i> Customised Design <i>◆</i> Premium Materials <i>◆</i> On-Time Fitting <i>◆</i> 5000+ Happy Clients <i>◆</i> End-to-End Solution <i>◆</i> Free Site Visit </span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>One team for your entire fit-out.</h2>
+      <p>From the first measurement to the final polish — we design, manufacture and install every element of your space in-house.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><circle cx="9" cy="12" r="1" fill="currentColor"/><circle cx="15" cy="12" r="1" fill="currentColor"/></svg></div><h3>uPVC Doors & Windows</h3><p>Weather-sealed, sound-resistant uPVC and WPVC systems with smooth sliding and mosquito mesh options.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg></div><h3>Aluminium Fabrication</h3><p>Durable aluminium partitions, windows and frames — engineered for strength and a clean modern finish.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><circle cx="10" cy="12" r=".8" fill="currentColor"/><circle cx="14" cy="12" r=".8" fill="currentColor"/></svg></div><h3>Modular Wardrobes</h3><p>Sliding & hinged wardrobes with smart internal storage, tailored to your room and your lifestyle.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg></div><h3>Pooja & Mandir Units</h3><p>Backlit CNC-cut mandir designs that bring a serene, luminous centrepiece to your home.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="10" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg></div><h3>TV & Living Units</h3><p>Statement TV panels, display units and full living-room joinery built around how you live.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="3" width="12" height="18" rx="1"/><line x1="6" y1="14" x2="18" y2="14"/></svg></div><h3>Glass, Mirror & Steel</h3><p>Toughened glass, designer mirrors, dressing units and trending stainless-steel door designs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="portfolio" id="work">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Our Work</div>
+      <h2>Real homes. Real transformations.</h2>
+      <p>A look at projects delivered across Raigarh and the region. Click on any picture to view fully in detail.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="active" data-f="all">All Work</button>
+      <button data-f="wardrobe">Wardrobes</button>
+      <button data-f="mandir">Mandir Units</button>
+      <button data-f="window">Windows & Doors</button>
+      <button data-f="living">Living & TV</button>
+      <button data-f="dressing">Dressing & Mirror</button>
+    </div>
+    <div class="gallery reveal" id="gallery"><!-- populated by JS --></div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="ba" id="transform">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Before / After</div>
+      <h2>See the difference we make.</h2>
+    </div>
+    <div class="ba-wrap">
+      <!-- BEFORE AND AFTER CONTAINER WITH BEAUTIFUL REAL HIGH RES IMAGES -->
+      <div class="compare reveal" id="compare">
+        <!-- Before: dusty concrete under-renovation frame -->
+        <div class="layer before">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" alt="Before Renovations">
+        </div>
+        <!-- After: Stunning bespoke glazed patio doors opening into bright natural space -->
+        <div class="layer after" id="afterLayer">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="After Installation by Bhatia Buildmart">
+        </div>
+        <span class="lbl b">Before</span><span class="lbl a">After</span>
+        <div class="handle" id="handle"><div class="grip">⇄</div></div>
+      </div>
+      <div class="ba-copy reveal">
+        <div class="eyebrow">The Bhatia Promise</div>
+        <h3>We don't just fit products — we rethink the whole space.</h3>
+        <p>Every project starts with a free site visit and ends only when you're delighted. Drag the slider to see how a tired construction area becomes a stunning glazed architectural feature.</p>
+        <ul>
+          <li><span class="dot">✓</span> Free measurement & design consultation at your home</li>
+          <li><span class="dot">✓</span> Customised to your space, budget and taste</li>
+          <li><span class="dot">✓</span> In-house fabrication for quality you can trust</li>
+          <li><span class="dot">✓</span> Clean, on-time installation with after-sales support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section>
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="s"><b data-count="5000">0</b><small>Happy Clients</small></div>
+      <div class="s"><b data-count="12">0</b><small>Years of Trust</small></div>
+      <div class="s"><b data-count="4">0</b><small>Material Specialities</small></div>
+      <div class="s"><b data-count="100" data-suffix="%">0</b><small>In-House Fitting</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Why Bhatia Buildmart</div>
+      <h2>Built on craft. Trusted by thousands.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="num">01</div><h3>End-to-End Solution</h3><p>Design, material, fabrication and fitting — handled by one accountable team, so nothing falls between the cracks.</p></div>
+      <div class="why reveal"><div class="num">02</div><h3>Fully Customised</h3><p>No off-the-shelf compromises. Every unit is sized and styled for your exact space and how you'll use it.</p></div>
+      <div class="why reveal"><div class="num">03</div><h3>Premium Materials</h3><p>Genuine uPVC, aluminium, steel and glass that look great on day one and hold up for years.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testi">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Client Love</div>
+      <h2>What our 5000+ clients say.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Our mandir unit turned out more beautiful than we imagined. The backlit work is stunning at night."</p><div class="who"><div class="av">R</div><div><b>Ramesh Patel</b><small>Raigarh</small></div></div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Replaced all our windows with uPVC sliding ones. No more dust and noise — and the finish is spotless."</p><div class="who"><div class="av">S</div><div><b>Sunita Verma</b><small>Tamnar</small></div></div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"The sliding wardrobe fits our small room perfectly. Great advice, fair price, neat installation."</p><div class="who"><div class="av">A</div><div><b>Anil Sahu</b><small>Gharghoda</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's transform your space.</h2>
+      <p>Call us or send a quick message — we'll arrange a free site visit at a time that suits you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <a href="tel:+919879843667">
+          <div class="ci-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg></div>
+          <div><small>Call Now</small><b>+91 98798 43667</b></div>
+        </a>
+        <a href="https://wa.me/919879843667?text=Hi%20Bhatia%20Buildmart%2C%20I'd%20like%20a%20quote." target="_blank" rel="noopener">
+          <div class="ci-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2s-1.2.3-3.9-.8-4.4-3.8-4.5-4-1.1-1.5-1.1-2.8.7-2 .9-2.2.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.9 1.2 2.2 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3z"/></svg></div>
+          <div><small>WhatsApp</small><b>Chat with us</b></div>
+        </a>
+        <div class="row">
+          <div class="ci-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg></div>
+          <div><small>Showroom</small><b>Gharghoda, Tamnar, Chhal — Raigarh, Chhattisgarh</b></div>
+        </div>
+        <div class="row">
+          <div class="ci-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><small>Open Hours</small><b>Every day · 8:00 AM – 8:00 PM</b></div>
+        </div>
+        <a href="https://www.facebook.com/Bhatiatraders24" target="_blank" rel="noopener">
+          <div class="ci-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-3 1.6-3 3.5V11H9v3h2v7h3v-7h2.5l.5-3H14V9.6c0-.4.2-.6.7-.6z"/></svg></div>
+          <div><small>Follow Us</small><b>facebook.com/Bhatiatraders24</b></div>
+        </a>
+      </div>
+
+      <div class="cform reveal">
+        <label>Your Name</label>
+        <input id="f-name" type="text" placeholder="e.g. Ramesh Patel">
+        <label>Phone Number</label>
+        <input id="f-phone" type="tel" placeholder="10-digit mobile number">
+        <label>What do you need?</label>
+        <select id="f-service">
+          <option>uPVC Doors & Windows</option>
+          <option>Aluminium Fabrication</option>
+          <option>Modular Wardrobe</option>
+          <option>Pooja / Mandir Unit</option>
+          <option>TV / Living Unit</option>
+          <option>Glass / Mirror / Steel</option>
+          <option>Other / Not sure</option>
+        </select>
+        <label>Message (optional)</label>
+        <textarea id="f-msg" rows="3" placeholder="Tell us a little about your space..."></textarea>
+        <button class="btn" id="sendBtn">Send Enquiry via WhatsApp →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#home" class="brand" style="margin-bottom:16px">
+          <div class="mark"><span>bB</span></div>
+          <div><b>Bhatia Buildmart</b><small>Aluminium · Steel · uPVC · Glass</small></div>
+        </a>
+        <p style="max-width:34ch;font-size:.92rem">End-to-end customised interiors and fittings, crafted with care for 5000+ happy homes across Raigarh, Chhattisgarh.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a class="flink" href="#services">Services</a>
+        <a class="flink" href="#work">Our Work</a>
+        <a class="flink" href="#transform">Before / After</a>
+        <a class="flink" href="#why">Why Us</a>
+        <a class="flink" href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <a class="flink" href="tel:+919879843667">+91 98798 43667</a>
+        <a class="flink" href="https://wa.me/919879843667" target="_blank" rel="noopener">WhatsApp Chat</a>
+        <a class="flink" href="https://www.facebook.com/Bhatiatraders24" target="_blank" rel="noopener">Facebook</a>
+        <span class="flink">Gharghoda · Tamnar · Chhal</span>
+        <span class="flink">Open daily 8 AM – 8 PM</span>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© <span id="yr"></span> Bhatia Buildmart. All rights reserved.</span>
+      <span>Crafted with care · Raigarh, CG</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX MODAL ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="Zoomed view">
+  </div>
+  <div class="lightbox-caption">
+    <h4 id="lightboxTitle">Project Title</h4>
+    <p id="lightboxCat">Category</p>
+  </div>
+</div>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="fab" href="https://wa.me/919879843667?text=Hi%20Bhatia%20Buildmart%2C%20I'd%20like%20a%20quote." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2s-1.2.3-3.9-.8-4.4-3.8-4.5-4-1.1-1.5-1.1-2.8.7-2 .9-2.2.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.9 1.2 2.2 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3z"/></svg>
+</a>
+
+<script>
+/* =====================================================================
+   ▶ REAL LUXURIOUS INSTAGRAM/PINTEREST PICTURE LINKS FOR PRESENTATION
+   ===================================================================== */
+const WORKS = [
+  { 
+    cat: "dressing", 
+    title: "Dressing Table & Backlit Floating Mirror Unit", 
+    badge: "After",  
+    img: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80", 
+    c1: "#e8e0d0", 
+    c2: "#bfae8e", 
+    span: false 
+  },
+  { 
+    cat: "mandir",   
+    title: "Backlit Wooden Mandir Setup",        
+    badge: "After",  
+    img: "https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=600&q=80", 
+    c1: "#d8c7a3", 
+    c2: "#a98a52", 
+    span: false 
+  },
+  { 
+    cat: "living",   
+    title: "Premium Living Room & TV Wall Paneling",        
+    badge: "Client Fav",       
+    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80", 
+    c1: "#e3d6bb", 
+    c2: "#b5946a", 
+    span: true  
+  },
+  { 
+    cat: "window",   
+    title: "Slim Frame uPVC Sliding Balcony Door",            
+    badge: "After",  
+    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", 
+    c1: "#cdd6da", 
+    c2: "#8aa0ab", 
+    span: false 
+  },
+  { 
+    cat: "mandir",   
+    title: "CNC Backlit Pooja Room Screen Door",       
+    badge: "New Release",  
+    img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80", 
+    c1: "#e9dcc1", 
+    c2: "#b9852f", 
+    span: false 
+  },
+  { 
+    cat: "wardrobe", title: "Custom Hinged Wardrobe & Shelves",      
+    badge: "Fitted",  
+    img: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80", 
+    c1: "#dccdb0", 
+    c2: "#a98e62", 
+    span: false 
+  },
+  { 
+    cat: "window",   
+    title: "Modern Premium Glazing Aluminium Window",      
+    badge: "Best Seller",       
+    img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80", 
+    c1: "#cdd6da", 
+    c2: "#7e95a1", 
+    span: false 
+  },
+  { 
+    cat: "living",   
+    title: "Custom floating TV Console & Floating Shelf",            
+    badge: "After",  
+    img: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=600&q=80", 
+    c1: "#e3d6bb", 
+    c2: "#b5946a", 
+    span: false 
+  },
+  { 
+    cat: "wardrobe", title: "Luxury Glass sliding closet wardobes",             
+    badge: "Custom Fit",  
+    img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80", 
+    c1: "#dfd3bd", 
+    c2: "#b59a6a", 
+    span: true  
+  },
+  { 
+    cat: "window",   
+    title: "Double Glazed uPVC Soundproofing Windows",          
+    badge: "Fitted",       
+    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80", 
+    c1: "#cdd6da", 
+    c2: "#8aa0ab", 
+    span: false 
+  },
+  { 
+    cat: "mandir",   
+    title: "Warm Backlit Mandir & Partition Frame",       
+    badge: "After",  
+    img: "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=600&q=80", 
+    c1: "#d8c7a3", 
+    c2: "#a98a52", 
+    span: false 
+  },
+  { 
+    cat: "dressing", title: "Steel Pivot Custom Entrance Glass Gate",  
+    badge: "Toughened",       
+    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80", 
+    c1: "#d6d0c2", 
+    c2: "#9b9482", 
+    span: false 
+  }
+];
+
+const ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
+
+function renderGallery(filter="all"){
+  const g = document.getElementById("gallery");
+  g.innerHTML = "";
+  WORKS.filter(w => filter==="all" || w.cat===filter).forEach((w, idx) => {
+    const card = document.createElement("div");
+    card.className = "work" + (w.span ? " span2" : "");
+    const media = w.img
+      ? `<img src="${w.img}" alt="${w.title}" loading="lazy">`
+      : `<div class="ph" style="--c1:${w.c1};--c2:${w.c2}">${ICON}<span class="ph-label">${w.title}</span></div>`;
+    
+    card.innerHTML = `
+      ${w.badge ? `<span class="badge">${w.badge}</span>` : ""}
+      ${media}
+      <div class="overlay"><small>${w.cat}</small><h4>${w.title}</h4></div>`;
+    
+    // Add Click event to trigger the interactive client lightbox
+    card.addEventListener("click", () => {
+      openLightbox(w.img, w.title, w.cat);
+    });
+    
+    g.appendChild(card);
+  });
+}
+renderGallery();
+
+// Lightbox Open & Close Functions
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxTitle = document.getElementById("lightboxTitle");
+const lightboxCat = document.getElementById("lightboxCat");
+
+function openLightbox(url, title, category) {
+  if(!url) return;
+  lightboxImg.src = url;
+  lightboxTitle.textContent = title;
+  lightboxCat.textContent = category;
+  lightbox.classList.add("active");
+}
+
+document.getElementById("lightboxClose").addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("active");
+  }
+});
+
+document.getElementById("filters").addEventListener("click", e=>{
+  if(e.target.tagName!=="BUTTON") return;
+  document.querySelectorAll("#filters button").forEach(b=>b.classList.remove("active"));
+  e.target.classList.add("active");
+  renderGallery(e.target.dataset.f);
+});
+
+/* ---- nav scroll + mobile menu ---- */
+const nav = document.getElementById("nav");
+addEventListener("scroll", ()=> nav.classList.toggle("scrolled", scrollY>30));
+const links = document.getElementById("links");
+document.getElementById("toggle").addEventListener("click", ()=> links.classList.toggle("open"));
+links.addEventListener("click", e=>{ if(e.target.tagName==="A") links.classList.remove("open"); });
+
+/* ---- reveal on scroll ---- */
+const io = new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target);} }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* ---- count up stats ---- */
+const cio = new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting) return;
+  const el=en.target, end=+el.dataset.count, suf=el.dataset.suffix||"", plus=end>=1000?"+":"";
+  let cur=0, step=Math.ceil(end/60);
+  const t=setInterval(()=>{ cur+=step; if(cur>=end){cur=end;clearInterval(t);} el.textContent=cur.toLocaleString()+suf+(cur===end?plus:""); },24);
+  cio.unobserve(el);
+}), {threshold:.5});
+document.querySelectorAll("[data-count]").forEach(el=>cio.observe(el));
+
+/* ---- before/after slider ---- */
+(function(){
+  const box=document.getElementById("compare"), after=document.getElementById("afterLayer"), handle=document.getElementById("handle");
+  let drag=false;
+  const setPos=x=>{
+    const r=box.getBoundingClientRect();
+    let p=((x-r.left)/r.width)*100; p=Math.max(2,Math.min(98,p));
+    after.style.clipPath=`inset(0 0 0 ${p}%)`; handle.style.left=p+"%";
+  };
+  const start=()=>drag=true; const end=()=>drag=false;
+  const move=e=>{ if(!drag) return; setPos((e.touches?e.touches[0].clientX:e.clientX)); };
+  handle.addEventListener("mousedown",start); handle.addEventListener("touchstart",start,{passive:true});
+  addEventListener("mouseup",end); addEventListener("touchend",end);
+  addEventListener("mousemove",move); addEventListener("touchmove",move,{passive:true});
+  box.addEventListener("click",e=>setPos(e.clientX));
+})();
+
+/* ---- contact form -> WhatsApp ---- */
+document.getElementById("sendBtn").addEventListener("click", ()=>{
+  const n=document.getElementById("f-name").value.trim();
+  const p=document.getElementById("f-phone").value.trim();
+  const s=document.getElementById("f-service").value;
+  const m=document.getElementById("f-msg").value.trim();
+  const text=`Hi Bhatia Buildmart!%0A%0AName: ${encodeURIComponent(n||"-")}%0APhone: ${encodeURIComponent(p||"-")}%0ANeed: ${encodeURIComponent(s)}%0AMessage: ${encodeURIComponent(m||"-")}`;
+  window.open(`https://wa.me/919879843667?text=${text}`,"_blank");
+});
+
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
